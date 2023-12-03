@@ -41,6 +41,7 @@ print("Decrypted:", decrypted_text)
 > ### Custom Key ###
 
 ```
+
 public_key = """\
 -----BEGIN PUBLIC KEY-----
 MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCCXBKdgaHDJGAe9lk8Y0osRTEe
@@ -65,6 +66,7 @@ MbwGrFp4jJjpwxS8j2YhcUmz+7SiCchwmb9SiHpSJTVyvVdBYSxstTF2iSECQA2u
 GN5k0Z2HJnGELXbvds0CQQCIR5KG1o0Tb5ZCB0PoHZEVvBbSh0qLRkNwA5IO4npU
 j26wV8QxpL9EAadJssR+X1Rky551qWPgWOc1RA2bBzXQ
 -----END RSA PRIVATE KEY-----"""
+crypto_instance = Crypto(public_key,private_key)
 plaintext = "Hello, World!"
 encrypted_text = crypto_instance.encrypt(plaintext)
 print("Encrypted:", encrypted_text)
